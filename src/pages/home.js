@@ -19,7 +19,7 @@ export const Home = () => {
     <div className="container-fluid">
       <div className="row justify-content-center my-3">
         <div className="col-8">
-          <h1 className="text-center">I Roll You - Cinnamon</h1>
+          <h1 className="text-center">I Roll U - Cinnamon</h1>
           <p className="text-center">
             Somos un emprendimiento que busca deleitar a los amantes de los Cinnamon Rolls.
             Utilizamos productos de calidad y ponemos nuestra pasión para poder entregar una experiencia única,

@@ -28,7 +28,7 @@ export const Navbar = () => {
   };
 
   const handleToggle = () => {
-    if (window.innerWidth <= 767){
+    if (window.innerWidth <= 767) {
       const bsCollapse = new bootstrap.Collapse('#navbarSupportedContent', { // eslint-disable-line
         toggle: false
       });
@@ -42,11 +42,17 @@ export const Navbar = () => {
       <nav className="navbar navbar-expand-md sticky-top">
         <div className="container justify-content-center text-center">
           <div className="row justify-content-center">
-            <div className="col-auto">
+            <div className="col-auto pe-0 ">
               <a className="navbar-brand" href="/">
                 <div className="container-logo-home">
                   <img src={image} alt="logo-home" />
                 </div>
+              </a>
+            </div>
+            <div className="col-auto ps-0">
+              <a className="navbar-brand" href="/">
+                <h5 className="d-inline align-bottom">I Roll</h5>
+                <h5 className="d-flex justify-content-center">U</h5>
               </a>
             </div>
             <div className="col-auto pt-2">
@@ -66,7 +72,7 @@ export const Navbar = () => {
                   </li>
                   <li className="nav-item">
                     <Link to="/order" className="nav-link" onClick={handleToggle}>
-                      Carrito
+                      Carro
                       {(store.order.rolls?.length > 0 || store.order.combos?.length > 0) &&
                         <span className="badge text-bg-secondary">{store.order.rolls.length + store.order.combos.length}</span>
                       }

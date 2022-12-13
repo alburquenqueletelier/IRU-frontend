@@ -8,12 +8,16 @@ export const CategoryNav = () => {
     
     const resizeObserver = new ResizeObserver((element)=>{
         // console.log(element);
-        if (window.innerWidth <= 767 && document.querySelector('div.bg-light.rounded-bottom')){
+        if (document.querySelector('div.bg-light.rounded-bottom')){
             const menuBar = document.querySelector('div.bg-light.rounded-bottom');
             menuBar.style.top = (element[0].target.offsetHeight)+'px';
             // console.log('height navbar: ', element);
-        } 
+        }
     });
+
+    const handleChoose = (e)=>{
+        console.log(e);
+    };
 
     useEffect(()=>{
         const menuBar = document.querySelector('div.bg-light.rounded-bottom');
@@ -26,18 +30,18 @@ export const CategoryNav = () => {
 
     return (
         <div className="bg-light rounded-bottom" style={{position: "sticky", zIndex: 9}}>
-            <ul className="nav justify-content-around">
+            <ul className="nav nav-tabs justify-content-around">
                 <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#rollsHeader">Rolls</a>
+                    <a className="nav-link" aria-current="page" href="#rollsHeader">Rolls</a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="#combosHeader">Combos</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#toppingsHeader">Salsas</a>
+                    <a className="nav-link" href="#toppingsHeader">Ver Salsas</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#aggregatesHeader">Agregados</a>
+                    <a className="nav-link" href="#aggregatesHeader">Ver Agregados</a>
                 </li>
                 {(store.order.rolls.length > 0 || store.order.combos.length > 0)  &&
                     <li className="nav-item">
