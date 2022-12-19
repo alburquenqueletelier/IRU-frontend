@@ -102,49 +102,49 @@ export const ProductsView = () => {
           }
         </div>
         <hr></hr>
-        <h1 id="toppingsHeader" className="text-center">Salsas</h1>
-        <div className="row row-cols-md-4 row-cols-1 justify-content-md-start justify-content-center">
-          {store.toppings ?
-            store.toppings.map((item, index) => {
-              return (
-                <div className="col-md-3 col-10 d-flex align-items-stretch mb-1" key={index}>
-                  <div className="card">
-                    <img src={item.image ? item.image : toppingImages.filter(topping => topping.salsa == item.name)[0].urlImage} className="size-image" alt={item.name} />
-                    <div className="card-body d-flex flex-column ">
-                      <h6 className="card-title">{item.name}</h6>
+        <h1 id="toppingsHeader" className="text-center"><span style={{color: "#E99B3F"}}>Salsas</span> & <span style={{color: "#EA6A4E"}}>Agregados</span></h1>
+        <div className="row">
+          <div className="col-6">
+
+            <ul className="list-group bg-danger">
+              {store.toppings ?
+                store.toppings.map((item, index) => {
+                  return (
+                    <li className="list-group-item" key={index}>
+                      {/* <img src={item.image ? item.image : toppingImages.filter(topping => topping.salsa == item.name)[0].urlImage} className="size-image" alt={item.name} /> */}
+                      <h5 className="card-title" style={{color: "#E99B3F"}}>{item.name}</h5>
                       <p>
                         {item.description}
                       </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })
-            : <Spinners />
-          }
-        </div>
-        <hr></hr>
-        <h1 id="aggregatesHeader" className="text-center">Agregados</h1>
-        <div className="row row-cols-md-4 row-cols-1 justify-content-md-start justify-content-center">
-          {store.aggregates ?
-            store.aggregates.map((item, index) => {
-              return (
-                <div className="col-md-3 col-10 d-flex align-items-stretch mb-1" key={index}>
-                  <div className="card">
-                    <img src={item.image ? item.image : aggregateImages.filter(topping => topping.salsa == item.name)[0].urlImage} className="size-image" alt={item.name} />
-                    <div className="card-body d-flex flex-column ">
-                      <h6 className="card-title">{item.name}</h6>
+                    </li>
+                  );
+                })
+                : <Spinners />
+              }
+            </ul>
+          </div>
+          <div className="col-6">
+
+            <ul className="list-group">
+              {store.aggregates ?
+                store.aggregates.map((item, index) => {
+                  return (
+                    <li className="list-group-item" key={index}>
+                      {/* <img src={item.image ? item.image : aggregateImages.filter(topping => topping.salsa == item.name)[0].urlImage} className="size-image" alt={item.name} /> */}
+                      <h5 className="card-title" style={{color: "#EA6A4E"}}>{item.name}</h5>
                       <p>
                         {item.description}
                       </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })
-            : <Spinners />
-          }
+                    </li>
+                  );
+                })
+                : <Spinners />
+              }
+            </ul>
+          </div>
         </div>
+        {/* <hr></hr>
+        <h1 id="aggregatesHeader" className="text-center">Agregados</h1> */}
       </div>
 
     </div>

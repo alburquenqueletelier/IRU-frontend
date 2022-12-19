@@ -38,11 +38,11 @@ export const CategoryNav = () => {
                     <a className="nav-link" href="#combosHeader">Combos</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#toppingsHeader">Ver Salsas</a>
+                    <a className="nav-link" href="#toppingsHeader">Salsas y Agregados</a>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                     <a className="nav-link" href="#aggregatesHeader">Ver Agregados</a>
-                </li>
+                </li> */}
                 {(store.order.rolls.length > 0 || store.order.combos.length > 0)  &&
                     <li className="nav-item">
                         <Link to="/order" className="btn nav-link">

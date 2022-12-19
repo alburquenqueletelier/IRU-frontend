@@ -96,7 +96,7 @@ export const OrderView = () => {
 
             {/* <!-- Button trigger modal --> */}
             {(store.order.rolls.length > 0 || store.order.combos.length > 0) &&
-                <button id="modal-order-button" type="button" className="btn rounded-circle d-md-none" data-bs-toggle="modal" data-bs-target="#orderDetailModal">
+                <button style={{background: "#E99B3F"}} id="modal-order-button" type="button" className="btn rounded-circle d-md-none" data-bs-toggle="modal" data-bs-target="#orderDetailModal">
                     <img src="https://cdn-icons-png.flaticon.com/512/6737/6737602.png" alt="Pedido" />
                 </button>
 
@@ -106,9 +106,7 @@ export const OrderView = () => {
             <div className="modal fade" id="orderDetailModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
-                        <div className="modal-header">
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
+                        <button type="button" className="btn-close d-flex ms-auto border border-1" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div className="modal-body">
                             <Detail displayMode="d-flex" deliveryTag="deliveryModalTag" retiroTag="retiroModalTag" />
                         </div>
