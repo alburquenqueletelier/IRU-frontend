@@ -45,7 +45,10 @@ export const CategoryNav = () => {
                 </li>
                 {(store.order.rolls.length > 0 || store.order.combos.length > 0)  &&
                     <li className="nav-item">
-                        <Link to="/order" className="btn nav-link" style={{color: "#EA6A4E"}}>Carro <span style={{margin: "0px"}} className="badge text-bg-secondary">{store.order.rolls.length + store.order.combos.length}</span></Link>
+                        <Link to="/order" className="btn nav-link">
+                            <img style={{width: "30px", objectFit: "fill"}} src="https://cdn-icons-png.flaticon.com/512/5952/5952829.png" alt="carro"/>
+                            <span style={{margin: "0px"}} className="badge text-bg-secondary">{store.order.rolls.length + store.order.combos.length}</span>
+                        </Link>
                     </li>
                 }
             </ul>

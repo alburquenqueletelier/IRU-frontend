@@ -96,7 +96,7 @@ export const OrderView = () => {
 
             {/* <!-- Button trigger modal --> */}
             {(store.order.rolls.length > 0 || store.order.combos.length > 0) &&
-                <button id="modal-order-button" type="button" className="btn btn-info rounded-circle d-md-none" data-bs-toggle="modal" data-bs-target="#orderDetailModal">
+                <button id="modal-order-button" type="button" className="btn rounded-circle d-md-none" data-bs-toggle="modal" data-bs-target="#orderDetailModal">
                     <img src="https://cdn-icons-png.flaticon.com/512/6737/6737602.png" alt="Pedido" />
                 </button>
 

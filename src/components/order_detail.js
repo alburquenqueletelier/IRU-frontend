@@ -233,13 +233,15 @@ export const Detail = (props) => {
                     </label>
                 </div>
             </div>
+            <div className="d-flex flex-column">
 
-            <div className="form-floating d-flex m-auto" style={{ maxWidth: "10rem" }}>
-                <input value={inputPhone} onChange={(e) => setInputPhone(e.target.value)} type="text" className="form-control" id="floatingtext" placeholder="Telefono" />
-                <label htmlFor="floatingtext">Teléfono <small style={{ fontSize: "0.7rem" }}>Ej: 979577547</small></label>
+                <div className="form-floating d-flex m-auto" style={{ maxWidth: "10rem" }}>
+                    <input value={inputPhone} onChange={(e) => setInputPhone(e.target.value)} type="text" className="form-control" id="floatingtext" placeholder="Telefono" />
+                    <label htmlFor="floatingtext">Teléfono <small style={{ fontSize: "0.7rem" }}>Ej: 979577547</small></label>
+                </div>
+                <small>Al precionar comprar se abríra Whatsapp <br /> con tu orden lista para ser enviada</small>
+                <button type="button" className="btn btn-outline-primary" onClick={handleBuy}>Comprar</button>
             </div>
-            <small>Al precionar comprar se abríra Whatsapp <br /> con tu orden lista para ser enviada</small>
-            <button type="button" className="btn btn-outline-primary" onClick={handleBuy}>Comprar</button>
         </div>
 
     );
