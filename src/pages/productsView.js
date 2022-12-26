@@ -52,7 +52,7 @@ export const ProductsView = () => {
       <ProductDetail />
       <div className="container-sm">
         <CategoryNav />
-        <h1 id="rollsHeader" className="text-center">Rolls</h1>
+        <h1 id="rollsHeader" className="text-center" style={{color: "#5F201A"}}>Rolls</h1>
         <div className="row row-cols-md-4 row-cols-1 justify-content-md-start justify-content-center">
           {store.rolls ?
             store.rolls.map((item, index) => {
@@ -64,7 +64,7 @@ export const ProductsView = () => {
                     product="rolls"
                     description={item.description}
                     image={item.image} price={item.price}
-                    amount={store.order.rolls.filter(roll => roll.id == item.id)?.length > 0 ? store.order.rolls.filter(roll => roll.id == item.id)[0]?.amount : 0}
+                    amount={store.order.rolls.filter(roll => roll.id == item.id)?.length > 0 ? store.order.rolls.filter(roll => roll.id == item.id)[0]?.amount : 1}
                     addOrRemove={
                       store?.order.rolls.filter(roll => roll.id == item.id).length == 1 ? actions.deleteOrder : actions.postAddOrder
                     }
@@ -77,7 +77,7 @@ export const ProductsView = () => {
           }
         </div>
         <hr></hr>
-        <h1 id="combosHeader" className="text-center">Combos</h1>
+        <h1 id="combosHeader" className="text-center" style={{color: "#5F201A"}}>Combos</h1>
         <div className="row row-cols-md-4 row-cols-1 justify-content-md-start justify-content-center">
           {store.combos ?
             store.combos.map((item, index) => {
@@ -89,7 +89,7 @@ export const ProductsView = () => {
                     product="combos"
                     description={item.description}
                     image={item.image} price={item.price}
-                    amount={store.order.combos.filter(combo => combo.id == item.id)?.length > 0 ? store.order.combos.filter(combo => combo.id == item.id)[0]?.amount : 0}
+                    amount={store.order.combos.filter(combo => combo.id == item.id)?.length > 0 ? store.order.combos.filter(combo => combo.id == item.id)[0]?.amount : 1}
                     addOrRemove={
                       store?.order.combos.filter(combo => combo.id == item.id).length == 1 ? actions.deleteOrder : actions.postAddOrder
                     }

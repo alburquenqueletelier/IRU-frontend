@@ -39,29 +39,29 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-md sticky-top">
+      <nav className="navbar navbar-expand-md sticky-top" style={{height: "fit-content"}}>
         <div className="container justify-content-center text-center">
           <div className="row justify-content-center">
-            <div className="col-auto pe-0 ">
-              <a className="navbar-brand" href="/">
+            <div className="col-auto pe-0 " style={{height: "fit-content"}}>
+              <a className="navbar-brand" href="/" style={{height: "fit-content"}}>
                 <div className="container-logo-home">
                   <img src={image} alt="logo-home" />
                 </div>
               </a>
             </div>
-            <div className="col-auto ps-0">
+            <div className="col-auto ps-0" style={{height: "fit-content"}}>
               <a className="navbar-brand" href="/">
                 <h5 className="d-inline align-bottom">I Roll</h5>
                 <h5 className="d-flex justify-content-center">U</h5>
               </a>
             </div>
-            <div className="col-auto pt-2">
+            <div className="col-auto pt-2" style={{height: "fit-content"}}>
               {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={(e)=>handleToggle(e)}> */}
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" onClick={(e) => handleToggle(e)}>
                 <span className="navbar-toggler-icon"></span>
               </button>
             </div>
-            <div className="col-md-auto col-12 pt-md-2 pt-0">
+            <div className="col-md-auto col-12 pt-md-2 pt-0" style={{height: "fit-content"}}>
 
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">

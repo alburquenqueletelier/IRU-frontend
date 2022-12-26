@@ -8,6 +8,11 @@ export const Contact = () => {
 
     const { store, actions } = useContext(Context);
 
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        console.log('hola');
+    };
+
     return (
         <div className="container text-center">
             <h1>Contáctanos</h1>
@@ -30,7 +35,7 @@ export const Contact = () => {
                 </ul>
             </div>
             <div className="col-sm-6 col-10 m-auto mb-2 ps-sm-5 ps-0">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="form-floating mb-3">
                         <input type="text" className="form-control" id="floatingNameContact" placeholder="name@example.com" />
                         <label htmlFor="floatingNameContact">Nombre</label>
@@ -43,6 +48,7 @@ export const Contact = () => {
                         <textarea style={{height: "10rem"}} className="form-control" placeholder="Mensaje" id="floatingTextarea"></textarea>
                         <label htmlFor="floatingTextarea">Mensaje</label>
                     </div>
+                    <button type="submit" className="btn border border-1 mt-1">Enviar</button>
                 </form>
             </div>
 

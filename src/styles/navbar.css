@@ -11,6 +11,10 @@ nav img {
 	object-fit: cover;
 }
 
+nav img:hover{
+    transform: scale(1.1);
+}
+
 nav div.row{
     height: 3.5rem;
 }
